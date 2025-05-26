@@ -140,7 +140,7 @@ Note: All candidates will be evaluated for precision and attention to detail.`);
           <p className="mb-2">
             Divizend Referral Program •
             <a
-              href="/toc"
+              href="/terms"
               className="text-white/80 hover:text-white underline underline-offset-2 ml-1"
             >
               Terms and conditions apply
