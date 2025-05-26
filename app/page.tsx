@@ -110,7 +110,7 @@ Note: All candidates will be evaluated for precision and attention to detail.`);
             <div className="bg-gradient-to-b from-purple-400 to-pink-500 text-black p-4 rounded-xl">
               <div className="text-2xl font-black">PASSIVE WEALTH</div>
               <div className="text-sm">
-                Money while you sleep, in fiat or SOL
+                Money while you sleep, in fiat or crypto
               </div>
             </div>
           </div>
