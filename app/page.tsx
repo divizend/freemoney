@@ -109,7 +109,9 @@ Note: All candidates will be evaluated for precision and attention to detail.`);
             </div>
             <div className="bg-gradient-to-b from-purple-400 to-pink-500 text-black p-4 rounded-xl">
               <div className="text-2xl font-black">PASSIVE WEALTH</div>
-              <div className="text-sm">Money while you sleep</div>
+              <div className="text-sm">
+                Money while you sleep, in fiat or SOL
+              </div>
             </div>
           </div>
         </div>
@@ -135,7 +137,15 @@ Note: All candidates will be evaluated for precision and attention to detail.`);
 
         {/* Footer */}
         <div className="text-center mt-12 text-white/60 text-sm">
-          <p>Divizend Referral Program • Terms and conditions apply</p>
+          <p className="mb-2">
+            Divizend Referral Program •
+            <a
+              href="/toc"
+              className="text-white/80 hover:text-white underline underline-offset-2 ml-1"
+            >
+              Terms and conditions apply
+            </a>
+          </p>
         </div>
       </div>
     </div>
