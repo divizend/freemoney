@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions - Divizend Referral Program",
@@ -478,12 +479,12 @@ export default function TermsOfConditions() {
 
         {/* Back to Home Link */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 transition-all duration-200"
           >
             ← Back to Referral Program
-          </a>
+          </Link>
         </div>
       </div>
     </div>
