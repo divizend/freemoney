@@ -101,7 +101,7 @@ Note: All candidates will be evaluated for precision and attention to detail.`);
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="bg-gradient-to-b from-yellow-400 to-orange-500 text-black p-4 rounded-xl">
               <div className="text-2xl font-black">RECURRING INCOME</div>
-              <div className="text-sm">Earn from every trade</div>
+              <div className="text-sm">Earn from every reclaim</div>
             </div>
             <div className="bg-gradient-to-b from-green-400 to-emerald-500 text-black p-4 rounded-xl">
               <div className="text-2xl font-black">NO LIMITS</div>
