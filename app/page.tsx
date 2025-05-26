@@ -1,103 +1,143 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const handleRegisterInterest = () => {
+    const subject = encodeURIComponent(
+      "Divizend Referral Program - Interest Registration"
+    );
+    const body = encodeURIComponent(`Hello,
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+[Please describe your background and why you're interested in our referral program]
+
+Best regards,
+[Your name]
+
+---
+Note: All candidates will be evaluated for precision and attention to detail.`);
+
+    window.location.href = `mailto:referrals@divizend.com?subject=${subject}&body=${body}`;
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 p-4 sm:p-8">
+      <div className="max-w-4xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-12 pt-8">
+          <h1 className="text-6xl sm:text-8xl font-black text-white mb-4 drop-shadow-2xl animate-pulse">
+            💰 FREE MONEY 💰
+          </h1>
+          <div className="bg-yellow-300 text-black px-6 py-3 rounded-full inline-block text-xl sm:text-2xl font-bold shadow-lg transform rotate-2">
+            🚀 UNLIMITED EARNING POTENTIAL 🚀
+          </div>
+          <p className="text-white text-xl sm:text-2xl mt-6 font-semibold drop-shadow-lg">
+            Join Divizend's Exclusive Referral Program
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* How It Works Section */}
+        <div className="bg-white rounded-3xl shadow-2xl p-8 mb-8">
+          <h2 className="text-4xl font-black text-center mb-8 text-gray-800">
+            🎯 HOW IT WORKS
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                step: "1",
+                icon: "📝",
+                title: "Register at Divizend",
+                description: "Create your account and get verified",
+              },
+              {
+                step: "2",
+                icon: "✍️",
+                title: "Sign Your Referral Contract",
+                description: "Lock in your commission structure",
+              },
+              {
+                step: "3",
+                icon: "🎯",
+                title: "Find People with Stock Portfolios",
+                description: "Target investors ready to grow their wealth",
+              },
+              {
+                step: "4",
+                icon: "🔗",
+                title: "Share Your Referral Link",
+                description: "Get them registered through your unique link",
+              },
+              {
+                step: "5",
+                icon: "💸",
+                title: "Earn Cash Forever",
+                description:
+                  "Help them make money while you earn recurring commissions",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border-2 border-blue-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <div className="text-center">
+                  <div className="text-4xl mb-3">{item.icon}</div>
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mx-auto mb-3">
+                    {item.step}
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-800">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="bg-black text-white rounded-3xl p-8 mb-8">
+          <h2 className="text-3xl font-black text-center mb-6">
+            ⚡ EXPLOSIVE BENEFITS ⚡
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-gradient-to-b from-yellow-400 to-orange-500 text-black p-4 rounded-xl">
+              <div className="text-2xl font-black">RECURRING INCOME</div>
+              <div className="text-sm">Earn from every trade</div>
+            </div>
+            <div className="bg-gradient-to-b from-green-400 to-emerald-500 text-black p-4 rounded-xl">
+              <div className="text-2xl font-black">NO LIMITS</div>
+              <div className="text-sm">Unlimited referrals</div>
+            </div>
+            <div className="bg-gradient-to-b from-purple-400 to-pink-500 text-black p-4 rounded-xl">
+              <div className="text-2xl font-black">PASSIVE WEALTH</div>
+              <div className="text-sm">Money while you sleep</div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <button
+            onClick={handleRegisterInterest}
+            className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black text-2xl sm:text-3xl font-black px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 animate-bounce"
+          >
+            🔥 REGISTER YOUR INTEREST NOW! 🔥
+          </button>
+
+          <p className="text-white text-lg mt-4 font-semibold">
+            Limited spots available - Act fast!
+          </p>
+
+          <p className="text-white/80 text-sm mt-6 italic">
+            * All candidates will be evaluated for precision and attention to
+            detail
+          </p>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center mt-12 text-white/60 text-sm">
+          <p>Divizend Referral Program • Terms and conditions apply</p>
+        </div>
+      </div>
     </div>
   );
 }
